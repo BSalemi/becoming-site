@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Becoming — One mission. Every day.</title>
+  <meta name="description" content="Becoming is a self-trust rebuilding app. One mission at a time. Daily check-ins. Calm accountability." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #F8F8F6;
+      --text:      #1A1A1A;
+      --muted:     #6B6B6B;
+      --faint:     #BABABA;
+      --slate:     #8FA8C8;
+      --slate-light: #EEF3F9;
+      --sage:      #8FBF9F;
+      --border:    #E2E2DE;
+      --elevated:  #FFFFFF;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 48px;
+      background: rgba(248, 248, 246, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 20px;
+      color: var(--text);
+      letter-spacing: -0.3px;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 120px 48px 80px;
+      max-width: 900px;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(52px, 8vw, 96px);
+      font-weight: 400;
+      line-height: 1.0;
+      letter-spacing: -2px;
+      color: var(--text);
+      margin-bottom: 32px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--slate);
+    }
+
+    .accent-line {
+      width: 40px;
+      height: 2px;
+      background: var(--slate);
+      margin-bottom: 28px;
+      border-radius: 2px;
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--muted);
+      max-width: 480px;
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
+
+    .cta-group {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--text);
+      color: var(--bg);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 4px;
+      transition: opacity 0.2s;
+    }
+
+    .btn-primary:hover { opacity: 0.8; }
+
+    .cta-note {
+      font-size: 13px;
+      color: var(--faint);
+      letter-spacing: 0.02em;
+    }
+
+    section { padding: 120px 48px; }
+
+    .section-eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 20px;
+    }
+
+    .what {
+      border-top: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .what h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(36px, 4vw, 52px);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      color: var(--text);
+    }
+
+    .what-body p {
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .what-body p:last-child { margin-bottom: 0; }
+
+    .how {
+      border-top: 1px solid var(--border);
+      background: var(--elevated);
+    }
+
+    .how-inner, .principles-inner { max-width: 1100px; margin: 0 auto; }
+
+    .how h2, .principles h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(36px, 4vw, 52px);
+      font-weight: 400;
+      letter-spacing: -1px;
+      margin-bottom: 64px;
+    }
+
+    .principles h2 { max-width: 600px; }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+    }
+
+    .step-number {
+      font-family: 'DM Serif Display', serif;
+      font-size: 48px;
+      color: var(--border);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .step h3 {
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: -0.2px;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .step p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+    .principles { border-top: 1px solid var(--border); }
+
+    .principle-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+    }
+
+    .principle-item {
+      background: var(--elevated);
+      padding: 36px 40px;
+      border-left: 3px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .principle-item:hover { border-left-color: var(--slate); }
+
+    .principle-item h4 {
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: -0.2px;
+      margin-bottom: 8px;
+    }
+
+    .principle-item p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-logo { font-family: 'DM Serif Display', serif; font-size: 18px; }
+
+    .footer-links { display: flex; gap: 32px; list-style: none; }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { font-size: 12px; color: var(--faint); }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .fade-up:nth-child(1) { animation-delay: 0.1s; }
+    .fade-up:nth-child(2) { animation-delay: 0.25s; }
+    .fade-up:nth-child(3) { animation-delay: 0.4s; }
+    .fade-up:nth-child(4) { animation-delay: 0.55s; }
+    .fade-up:nth-child(5) { animation-delay: 0.7s; }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .hero { padding: 100px 24px 60px; }
+      section { padding: 80px 24px; }
+      .what { grid-template-columns: 1fr; gap: 40px; }
+      .steps { grid-template-columns: 1fr; gap: 40px; }
+      .principle-list { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 24px; text-align: center; }
+      .footer-links { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">Becoming</a>
+    <ul class="nav-links">
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#principles">Principles</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <p class="eyebrow fade-up">Available on iOS</p>
+    <h1 class="fade-up">One mission.<br /><em>Every day.</em></h1>
+    <div class="accent-line fade-up"></div>
+    <p class="hero-sub fade-up">
+      Not a habit tracker. Not a goal-setting app.
+      Becoming is about rebuilding the one thing that makes everything else possible — trust in yourself.
+    </p>
+    <div class="cta-group fade-up">
+      <a href="#" class="btn-primary">Download on the App Store</a>
+      <span class="cta-note">Coming soon</span>
+    </div>
+  </div>
+
+  <section class="what" id="what">
+    <div>
+      <p class="section-eyebrow">What it is</p>
+      <h2>Follow-through is a skill.<br />This is how you build it.</h2>
+    </div>
+    <div class="what-body">
+      <p>Most productivity apps give you more to track. Becoming gives you less. One mission. One daily check-in. A streak that means something because you earned it honestly.</p>
+      <p>When you miss days, there's no silent reset. There's a ritual — three questions that ask you to reckon with what happened and recommit to what you said you'd do.</p>
+      <p>Calm accountability. Never harsh. Never soft. Never preachy.</p>
+    </div>
+  </section>
+
+  <section class="how" id="how">
+    <div class="how-inner">
+      <p class="section-eyebrow">How it works</p>
+      <h2>Simple by design.</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">01</div>
+          <h3>Set one mission</h3>
+          <p>Define what you're working toward and how much time you can commit to it daily — even on your worst day.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">02</div>
+          <h3>Check in every day</h3>
+          <p>One tap. Optional note. Your streak grows. The work compounds. You start becoming someone who finishes things.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">03</div>
+          <h3>Reset when you miss</h3>
+          <p>Miss three days and the mission pauses. A short ritual asks what happened and how you'll prevent it. Then you're back.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="principles" id="principles">
+    <div class="principles-inner">
+      <p class="section-eyebrow">Principles</p>
+      <h2>Built on a few beliefs we won't compromise on.</h2>
+      <div class="principle-list">
+        <div class="principle-item">
+          <h4>One mission at a time</h4>
+          <p>Trying to do everything at once is how you do nothing. The constraint is the point.</p>
+        </div>
+        <div class="principle-item">
+          <h4>No hidden resets</h4>
+          <p>Missing days is acknowledged, not silently forgiven. Growth requires honesty.</p>
+        </div>
+        <div class="principle-item">
+          <h4>The core loop is always free</h4>
+          <p>You should be able to rebuild self-trust without paying for it. The basics are free, forever.</p>
+        </div>
+        <div class="principle-item">
+          <h4>No ads. Ever.</h4>
+          <p>An app about focus and integrity shouldn't be funded by interruption. It never will be.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="footer-logo">Becoming</span>
+    <ul class="footer-links">
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Service</a></li>
+      <li><a href="mailto:foryu.support@gmail.com">Contact</a></li>
+    </ul>
+    <span class="footer-copy">© 2025 Becoming. All rights reserved.</span>
+  </footer>
+
+</body>
+</html>

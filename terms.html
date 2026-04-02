@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Becoming</title>
+  <meta name="description" content="Terms of Service for the Becoming app." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #F8F8F6;
+      --text:     #1A1A1A;
+      --muted:    #6B6B6B;
+      --faint:    #BABABA;
+      --slate:    #8FA8C8;
+      --sage:     #8FBF9F;
+      --border:   #E2E2DE;
+      --elevated: #FFFFFF;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 48px;
+      background: rgba(248, 248, 246, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 20px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-back {
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-back:hover { color: var(--text); }
+
+    .page-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 140px 48px 120px;
+    }
+
+    .page-eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 48px;
+      font-weight: 400;
+      letter-spacing: -1px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .last-updated {
+      font-size: 13px;
+      color: var(--faint);
+      margin-bottom: 56px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: -0.3px;
+      color: var(--text);
+      margin-top: 48px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      margin: 16px 0 16px 20px;
+    }
+
+    ul li {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--slate);
+      text-decoration: none;
+      border-bottom: 1px solid var(--slate);
+      transition: opacity 0.2s;
+    }
+
+    a:hover { opacity: 0.7; }
+
+    .highlight-box {
+      background: var(--elevated);
+      border-left: 3px solid var(--slate);
+      padding: 20px 24px;
+      margin: 32px 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-logo { font-family: 'DM Serif Display', serif; font-size: 18px; }
+    .footer-links { display: flex; gap: 32px; list-style: none; }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--muted);
+      border-bottom: none;
+    }
+
+    .footer-copy { font-size: 12px; color: var(--faint); }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .page-wrap { padding: 100px 24px 80px; }
+      h1 { font-size: 36px; }
+      footer { flex-direction: column; gap: 24px; text-align: center; padding: 32px 24px; }
+      .footer-links { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">Becoming</a>
+    <a href="/" class="nav-back">← Back</a>
+  </nav>
+
+  <div class="page-wrap">
+    <p class="page-eyebrow">Legal</p>
+    <h1>Terms of Service</h1>
+    <p class="last-updated">Last updated: January 2025</p>
+
+    <div class="highlight-box">
+      <p>By downloading or using Becoming, you agree to these terms. They're written to be readable, not to trap you. If something is unclear, please ask us.</p>
+    </div>
+
+    <h2>Using the app</h2>
+    <p>Becoming is a personal productivity app designed to help you build consistency through daily commitment to a single mission. You may use the app for personal, non-commercial purposes.</p>
+    <p>You must be at least 13 years old to use Becoming. By using the app, you confirm that you meet this requirement.</p>
+
+    <h2>Your account</h2>
+    <p>You are responsible for maintaining the security of your account credentials. Do not share your password with others. We are not liable for any loss or damage arising from unauthorised access to your account.</p>
+    <p>You may delete your account at any time by contacting us at <a href="mailto:foryu.support@gmail.com">foryu.support@gmail.com</a>.</p>
+
+    <h2>Your content</h2>
+    <p>The mission content, log notes, and reflections you create in Becoming belong to you. We do not claim ownership of your content.</p>
+    <p>By using the app, you grant us a limited licence to store and display your content solely for the purpose of providing the service to you.</p>
+    <p>You are responsible for ensuring that content you enter does not violate any laws or third-party rights.</p>
+
+    <h2>Subscriptions</h2>
+    <p>Becoming offers a free tier that includes the core functionality of the app. An optional Pro subscription is available that unlocks additional features.</p>
+    <ul>
+      <li>Subscriptions are billed through the Apple App Store on a monthly or annual basis.</li>
+      <li>You can cancel your subscription at any time through your Apple ID account settings.</li>
+      <li>Cancellation takes effect at the end of the current billing period. No refunds are provided for unused portions of a subscription period.</li>
+      <li>Prices may change with reasonable notice.</li>
+    </ul>
+
+    <h2>Acceptable use</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Use the app in any way that violates applicable laws or regulations.</li>
+      <li>Attempt to gain unauthorised access to any part of the service or its infrastructure.</li>
+      <li>Reverse engineer, decompile, or attempt to extract the source code of the app.</li>
+      <li>Use the app to transmit harmful, offensive, or unlawful content.</li>
+    </ul>
+
+    <h2>Availability and changes</h2>
+    <p>We aim to keep Becoming available and working well, but we cannot guarantee uninterrupted access. The app may be temporarily unavailable due to maintenance, updates, or circumstances outside our control.</p>
+    <p>We reserve the right to modify, suspend, or discontinue any part of the service at any time. We will provide reasonable notice where possible.</p>
+
+    <h2>Disclaimer of warranties</h2>
+    <p>Becoming is provided "as is" without warranties of any kind, express or implied. We do not warrant that the app will be error-free, uninterrupted, or free from harmful components.</p>
+
+    <h2>Limitation of liability</h2>
+    <p>To the fullest extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the app, even if we have been advised of the possibility of such damages.</p>
+
+    <h2>Governing law</h2>
+    <p>These terms are governed by the laws of the United States. Any disputes arising from these terms or your use of the app shall be resolved in accordance with applicable law.</p>
+
+    <h2>Changes to these terms</h2>
+    <p>We may update these terms from time to time. When we do, we will update the "last updated" date at the top of this page. Continued use of the app after changes constitutes acceptance of the updated terms.</p>
+
+    <h2>Contact</h2>
+    <p>If you have any questions about these terms, please contact us at <a href="mailto:foryu.support@gmail.com">foryu.support@gmail.com</a>.</p>
+  </div>
+
+  <footer>
+    <span class="footer-logo">Becoming</span>
+    <ul class="footer-links">
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Service</a></li>
+      <li><a href="mailto:foryu.support@gmail.com">Contact</a></li>
+    </ul>
+    <span class="footer-copy">© 2025 Becoming. All rights reserved.</span>
+  </footer>
+
+</body>
+</html>
