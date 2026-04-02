@@ -102,10 +102,7 @@
       margin-bottom: 32px;
     }
 
-    .hero h1 em {
-      font-style: italic;
-      color: var(--slate);
-    }
+    .hero h1 em { font-style: italic; color: var(--slate); }
 
     .accent-line {
       width: 40px;
@@ -124,11 +121,7 @@
       margin-bottom: 48px;
     }
 
-    .cta-group {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
+    .cta-group { display: flex; align-items: center; gap: 24px; }
 
     .btn-primary {
       display: inline-flex;
@@ -148,12 +141,7 @@
     }
 
     .btn-primary:hover { opacity: 0.8; }
-
-    .cta-note {
-      font-size: 13px;
-      color: var(--faint);
-      letter-spacing: 0.02em;
-    }
+    .cta-note { font-size: 13px; color: var(--faint); letter-spacing: 0.02em; }
 
     section { padding: 120px 48px; }
 
@@ -180,23 +168,12 @@
       font-weight: 400;
       line-height: 1.1;
       letter-spacing: -1px;
-      color: var(--text);
     }
 
-    .what-body p {
-      font-size: 16px;
-      color: var(--muted);
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
-
+    .what-body p { font-size: 16px; color: var(--muted); line-height: 1.8; margin-bottom: 20px; }
     .what-body p:last-child { margin-bottom: 0; }
 
-    .how {
-      border-top: 1px solid var(--border);
-      background: var(--elevated);
-    }
-
+    .how { border-top: 1px solid var(--border); background: var(--elevated); }
     .how-inner, .principles-inner { max-width: 1100px; margin: 0 auto; }
 
     .how h2, .principles h2 {
@@ -209,11 +186,7 @@
 
     .principles h2 { max-width: 600px; }
 
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 48px;
-    }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
 
     .step-number {
       font-family: 'DM Serif Display', serif;
@@ -223,23 +196,12 @@
       margin-bottom: 16px;
     }
 
-    .step h3 {
-      font-size: 16px;
-      font-weight: 500;
-      letter-spacing: -0.2px;
-      color: var(--text);
-      margin-bottom: 10px;
-    }
-
+    .step h3 { font-size: 16px; font-weight: 500; letter-spacing: -0.2px; margin-bottom: 10px; }
     .step p { font-size: 14px; color: var(--muted); line-height: 1.7; }
 
     .principles { border-top: 1px solid var(--border); }
 
-    .principle-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2px;
-    }
+    .principle-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; }
 
     .principle-item {
       background: var(--elevated);
@@ -249,14 +211,7 @@
     }
 
     .principle-item:hover { border-left-color: var(--slate); }
-
-    .principle-item h4 {
-      font-size: 15px;
-      font-weight: 500;
-      letter-spacing: -0.2px;
-      margin-bottom: 8px;
-    }
-
+    .principle-item h4 { font-size: 15px; font-weight: 500; letter-spacing: -0.2px; margin-bottom: 8px; }
     .principle-item p { font-size: 14px; color: var(--muted); line-height: 1.7; }
 
     footer {
@@ -268,34 +223,20 @@
     }
 
     .footer-logo { font-family: 'DM Serif Display', serif; font-size: 18px; }
-
     .footer-links { display: flex; gap: 32px; list-style: none; }
 
-    .footer-links a {
-      font-size: 13px;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
+    .footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: var(--text); }
     .footer-copy { font-size: 12px; color: var(--faint); }
 
-    .fade-up {
-      opacity: 0;
-      transform: translateY(24px);
-      animation: fadeUp 0.8s ease forwards;
-    }
-
+    .fade-up { opacity: 0; transform: translateY(24px); animation: fadeUp 0.8s ease forwards; }
     .fade-up:nth-child(1) { animation-delay: 0.1s; }
     .fade-up:nth-child(2) { animation-delay: 0.25s; }
     .fade-up:nth-child(3) { animation-delay: 0.4s; }
     .fade-up:nth-child(4) { animation-delay: 0.55s; }
     .fade-up:nth-child(5) { animation-delay: 0.7s; }
 
-    @keyframes fadeUp {
-      to { opacity: 1; transform: translateY(0); }
-    }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 
     @media (max-width: 768px) {
       nav { padding: 16px 24px; }
@@ -313,12 +254,12 @@
 <body>
 
   <nav>
-    <a href="/" class="nav-logo">Becoming</a>
+    <a href="/becoming-site/" class="nav-logo">Becoming</a>
     <ul class="nav-links">
       <li><a href="#how">How it works</a></li>
       <li><a href="#principles">Principles</a></li>
-      <li><a href="privacy.html">Privacy</a></li>
-      <li><a href="terms.html">Terms</a></li>
+      <li><a href="/becoming-site/privacy.html">Privacy</a></li>
+      <li><a href="/becoming-site/terms.html">Terms</a></li>
     </ul>
   </nav>
 
@@ -400,8 +341,8 @@
   <footer>
     <span class="footer-logo">Becoming</span>
     <ul class="footer-links">
-      <li><a href="privacy.html">Privacy Policy</a></li>
-      <li><a href="terms.html">Terms of Service</a></li>
+      <li><a href="/becoming-site/privacy.html">Privacy Policy</a></li>
+      <li><a href="/becoming-site/terms.html">Terms of Service</a></li>
       <li><a href="mailto:foryu.support@gmail.com">Contact</a></li>
     </ul>
     <span class="footer-copy">© 2025 Becoming. All rights reserved.</span>
